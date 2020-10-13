@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 
-class LightTheme extends ThemeData {
-  static final _lightTheme = ThemeData(
-    primaryColor: Colors.black,
-    accentColor: Colors.black87,
-    backgroundColor: Colors.white,
-    buttonColor: Colors.black,
-    buttonTheme: ButtonThemeData(
+class LightTheme {
+  final ThemeData themeData;
+  LightTheme.initial({this.themeData});
+
+  static final _lightTheme = LightTheme.initial(
+    themeData: ThemeData(
+      primaryColor: Colors.black,
+      accentColor: Colors.black87,
+      backgroundColor: Colors.white,
       buttonColor: Colors.black,
-      textTheme: ButtonTextTheme.normal
+      buttonTheme: ButtonThemeData(
+        buttonColor: Colors.black,
+        textTheme: ButtonTextTheme.normal
+      ),
+      scaffoldBackgroundColor: Colors.blue
     )
   );
 

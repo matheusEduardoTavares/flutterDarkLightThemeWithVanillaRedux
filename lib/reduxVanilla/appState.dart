@@ -8,7 +8,7 @@ class AppState {
 
   factory AppState.initialState() {
     return AppState(
-      theme: LightTheme()
+      theme: LightTheme().themeData
     );
   }
 
